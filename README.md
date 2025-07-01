@@ -4,5 +4,8 @@
 - 我刚开始学习`html` `css` `js`等的编写, 所以网站不是很完善
 - 但是我会努力的!
 
+# 网页链接
+[https://zyoctopuszy.github.io/](https://zyoctopuszy.github.io/)
+
 
 ###### 顺便提一嘴, 我打算2025暑假给它投入我所有精力, 希望能达到不错的效果
