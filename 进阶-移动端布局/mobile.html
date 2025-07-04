@@ -3,9 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <title>mobile</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+  <style>
+    .box-px {
+      width: 300px;
+      height: 100px;
+      background-color: red;
+      margin-bottom: 50px;
+    }
+    .box-rem {
+      width: 5rem;
+      height: 3rem;
+      background-color: skyblue;
+    }
+  </style>
 </head>
 <body>
+  <div class="box-px">普通的px-div</div>
+  <div class="box-rem">rem-div</div>
 
+  <script>
+    function resetHtmlFontSize() {
+      document.documentElement.style.fontSize = screen.width / 10 + 'px';
+    }
+    resetHtmlFontSize();
+  </script>
 </body>
 </html>
