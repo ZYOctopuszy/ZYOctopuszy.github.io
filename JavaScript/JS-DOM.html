@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JS-DOM</title>
+</head>
+<body>
+  <div id="box1">这是一个ID选择器标签</div>
+  <div class="box2">这是一个类选择器标签</div>
+  <div>普通的div标签</div>
+
+  <button onclick="change_func()">修改标签</button>
+  <button onclick="change_back()">恢复标签</button>
+
+  <script>
+    let element_id = document.getElementById("box1");
+    console.log(element_id);
+
+    let element_class = document.getElementsByClassName("box2")[0];
+    console.log(element_class);
+
+    let element_tag = document.getElementsByTagName("div")[2];
+    console.log(element_tag);
+
+    function change_func() {
+      element_id.innerHTML = "这是通过ID选择器修改的标签";
+      element_class.innerHTML = "这是通过类选择器修改的标签";
+      element_tag.innerHTML = "这是通过标签选择器修改的标签";
+    }
+    function change_back() {
+      element_id.innerHTML = "这是一个ID选择器标签";
+      element_class.innerHTML = "这是一个类选择器标签";
+      element_tag.innerHTML = "普通的div标签";
+    }
+
+
+  </script>
+</body>
+</html>

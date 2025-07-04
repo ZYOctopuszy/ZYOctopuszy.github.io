@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JS函数</title>
+</head>
+<body>
+  <p>请按F12打开控制台查看结果</p>
+
+  <script>
+    function hello() {
+      console.log('hello, world')
+    }
+    hello()
+
+    function hello_with_return() {
+      return 'hello, world'
+    }
+
+    console.log(hello_with_return())
+
+    function hello_with_params(name) {
+      console.log("hello, " + name);
+    }
+
+    hello_with_params('Zicat')
+
+    //作用域
+    let global_var = 'global_var'
+    function local_var_function() {
+      let local_var = "local_var";
+      console.log("global var: " + global_var)
+      console.log("local var: " + local_var)
+    }
+
+    local_var_function()
+
+  </script>
+
+</body>
+</html>

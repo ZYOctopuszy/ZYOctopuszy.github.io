@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS浮动</title>
+  <style>
+    .father {
+      background-color: aquamarine;
+      border: 3px solid brown;
+      overflow: hidden;
+    }
+
+    /*创建一个块级盒子，并把元素放置在文档流中*/
+    /*.father::after {*/
+    /*  content: "";*/
+    /*  display: table;*/
+    /*  clear: both;*/
+    /*}*/
+
+    .left-float {
+      width: 100px;
+      height: 100px;
+      background-color: yellowgreen;
+      float: left;
+    }
+    .right-float {
+      width: 100px;
+      height: 100px;
+      background-color: yellow;
+      float: right;
+    }
+  </style>
+</head>
+<body>
+  <div class="father">
+    <div class="left-float">左浮动</div>
+    <div class="right-float">右浮动</div>
+  </div>
+  <p>
+    浮动元素会从文档流中移除，并创建一个块级盒子，并把元素放置
+  </p>
+</body>
+</html>
