@@ -19,14 +19,16 @@
   </style>
 </head>
 <body>
-  <div class="box-px">普通的px-div</div>
+  <div class="box-px" style="font-size: xxx-large">普通的px-div</div>
   <div class="box-rem">rem-div</div>
 
   <script>
     function resetHtmlFontSize() {
-      document.documentElement.style.fontSize = screen.width / 40 + 'px';
+      document.documentElement.style.fontSize = screen.width / 10 + 'px';
     }
     resetHtmlFontSize();
+
+    window.onresize = resetHtmlFontSize;
   </script>
 </body>
 </html>
