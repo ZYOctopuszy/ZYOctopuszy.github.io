@@ -9,8 +9,13 @@
   <div class="box2">这是一个类选择器标签</div>
   <div>普通的div标签</div>
 
-  <button onclick="change_func()">修改标签</button>
-  <button onclick="change_back()">恢复标签</button>
+  <button onclick="change_back_innerHTML()">恢复标签</button>
+  <button onclick="change_func_innerHTML()">修改标签(p标签属性)</button>
+  <button onclick="change_func_innerText()">修改标签(innerText)</button>
+  <button onclick="change_style()">修改标签(样式)</button>
+
+  <button>DOM事件绑定</button>
+  <button>DOM事件绑定-addEventListener</button>
 
   <script>
     let element_id = document.getElementById("box1");
@@ -22,17 +27,58 @@
     let element_tag = document.getElementsByTagName("div")[2];
     console.log(element_tag);
 
-    function change_func() {
-      element_id.innerHTML = "这是通过ID选择器修改的标签";
-      element_class.innerHTML = "这是通过类选择器修改的标签";
-      element_tag.innerHTML = "这是通过标签选择器修改的标签";
-    }
-    function change_back() {
+    function change_back_innerHTML() {
       element_id.innerHTML = "这是一个ID选择器标签";
       element_class.innerHTML = "这是一个类选择器标签";
       element_tag.innerHTML = "普通的div标签";
+
+      element_tag.style.backgroundColor = "";
+      element_class.style.backgroundColor = "";
+      element_id.style.backgroundColor = "";
+
+      element_tag.style.color = "";
+      element_class.style.color = "";
+      element_id.style.color = "";
+
+      element_tag.style.fontSize = "";
+      element_class.style.fontSize = "";
+      element_id.style.fontSize = "";
+    }
+    function change_func_innerHTML() {
+      element_id.innerHTML = "<p>这是通过ID选择器修改的标签</p>";
+      element_class.innerHTML = "<p>这是通过类选择器修改的标签</p>";
+      element_tag.innerHTML = "<p>这是通过标签选择器修改的标签</p>";
+    }
+    function change_func_innerText() {
+      element_id.innerText = "<p>这是通过ID选择器修改的标签</p>";
+      element_class.innerText = "<p>这是通过类选择器修改的标签</p>";
+      element_tag.innerText = "<p>这是通过标签选择器修改的标签</p>";
+    }
+    function change_style() {
+      element_id.style.backgroundColor = "red";
+      element_class.style.backgroundColor = "red";
+      element_tag.style.backgroundColor = "red";
+
+      element_id.style.color = "skyblue";
+      element_class.style.color = "skyblue";
+      element_tag.style.color = "skyblue";
+
+      element_id.style.fontSize = "20px";
+      element_class.style.fontSize = "20px";
+      element_tag.style.fontSize = "20px";
     }
 
+    //DOM绑定事件
+    let button_element = document.getElementsByTagName("button")[4];
+    console.log(button_element);
+    button_element.onclick = function () {
+      alert("DOM绑定事件-按钮点击");
+    }
+
+    let button_element_addEventListener = document.getElementsByTagName("button")[5];
+    button_element_addEventListener.addEventListener("click", function () {
+      alert("DOM绑定事件-按钮点击 by addEventListener");
+    });
 
   </script>
 </body>
