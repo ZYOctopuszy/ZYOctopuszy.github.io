@@ -3,8 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <title>Flex</title>
+  <style>
+    html {
+      font-size: 10px;
+    }
+    .container {
+      display: flex;
+      height: 40rem;
+      background-color: skyblue;
+      /*flex-direction: column;*/
+      flex-wrap: wrap;
+      /*justify-content: space-around;*/
+      /*align-items: center;*/
+      align-content: center;
+    }
+
+    .item {
+      width: 20rem;
+      font-size: 8rem;
+    }
+  </style>
 </head>
 <body>
-
+  <div class="container">
+    <div class="item" style="background-color: red">1</div>
+    <div class="item" style="background-color: orange">2</div>
+    <div class="item" style="background-color: yellow">3</div>
+    <div class="item" style="background-color: green">4</div>
+    <div class="item" style="background-color: cyan">5</div>
+    <div class="item" style="background-color: blue">6</div>
+  </div>
 </body>
 </html>
